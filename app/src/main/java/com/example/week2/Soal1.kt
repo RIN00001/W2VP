@@ -396,13 +396,13 @@ fun Soal1View(){
 
                     Image(
                         painter = painterResource(id = R.drawable.item_fish_and_chips),
-                        contentDescription = "LSteak",
+                        contentDescription = "Fish & Chips",
                         modifier = Modifier
                             .size(100.dp)
                             .padding(vertical = 8.dp)
                     )
 
-                    Text("LSteak")
+                    Text("Fish & Chips")
 
                     Spacer(Modifier.height(4.dp))
 
@@ -411,7 +411,7 @@ fun Soal1View(){
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text("Rp.210.000")
+                        Text("Rp.130.000")
                         Icon(
                             imageVector = Icons.Default.Add,
                             contentDescription = "Add Icon",

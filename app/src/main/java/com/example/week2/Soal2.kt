@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -67,7 +68,8 @@ fun Soal2View(){
                 "My Basket",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.align(Alignment.Center)
+                modifier = Modifier.align(Alignment.Center),
+                fontSize = 20.sp
             )
         }
         Row(
@@ -127,6 +129,16 @@ fun Soal2View(){
                 placeholder = {Text("Rifki Indra")},
                 modifier = Modifier.fillMaxWidth()
                     .padding(vertical = 8.dp)
+                ,   colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.White,
+                    unfocusedTextColor = Color.White,
+                    disabledTextColor =  Color.White,
+                    errorContainerColor = Color.White,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                    disabledIndicatorColor = Color.Transparent,
+                    errorIndicatorColor = Color.Transparent
+                )
             )
 
             Spacer(Modifier.height(12.dp))
@@ -138,6 +150,16 @@ fun Soal2View(){
                 placeholder = { Text("1234 5678 9012 1314") },
                 modifier = Modifier.fillMaxWidth()
                     .padding(vertical = 8.dp)
+                ,   colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.White,
+                    unfocusedTextColor = Color.White,
+                    disabledTextColor =  Color.White,
+                    errorContainerColor = Color.White,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                    disabledIndicatorColor = Color.Transparent,
+                    errorIndicatorColor = Color.Transparent
+                )
             )
 
             Spacer(Modifier.height(12.dp))
@@ -152,6 +174,16 @@ fun Soal2View(){
                         placeholder = { Text("10/30") },
                         modifier = Modifier.fillMaxWidth()
                             .padding(vertical = 8.dp)
+                        ,   colors = TextFieldDefaults.colors(
+                            focusedContainerColor = Color.White,
+                            unfocusedTextColor = Color.White,
+                            disabledTextColor =  Color.White,
+                            errorContainerColor = Color.White,
+                            focusedIndicatorColor = Color.Transparent,
+                            unfocusedIndicatorColor = Color.Transparent,
+                            disabledIndicatorColor = Color.Transparent,
+                            errorIndicatorColor = Color.Transparent
+                        )
                     )
                 }
                 Column (
@@ -164,6 +196,16 @@ fun Soal2View(){
                         placeholder = { Text("123") },
                         modifier = Modifier.fillMaxWidth()
                             .padding(vertical = 8.dp)
+                        ,   colors = TextFieldDefaults.colors(
+                            focusedContainerColor = Color.White,
+                            unfocusedTextColor = Color.White,
+                            disabledTextColor =  Color.White,
+                            errorContainerColor = Color.White,
+                            focusedIndicatorColor = Color.Transparent,
+                            unfocusedIndicatorColor = Color.Transparent,
+                            disabledIndicatorColor = Color.Transparent,
+                            errorIndicatorColor = Color.Transparent
+                        )
                     )
                 }
             }
