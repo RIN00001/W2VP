@@ -36,7 +36,7 @@ fun Soal3View() {
                 .fillMaxSize()
                 .background(Color(0xFF2F5D50))
         ) {
-//hed
+
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -52,7 +52,7 @@ fun Soal3View() {
                     Text("Beranda", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                     Icon(Icons.Default.Notifications, contentDescription = "Notif", tint = Color.White)
                 }
-//bi
+
 
                 Box(
                     modifier = Modifier
@@ -106,7 +106,7 @@ fun Soal3View() {
 
                 Spacer(Modifier.height(16.dp))
 
-                //p
+
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
