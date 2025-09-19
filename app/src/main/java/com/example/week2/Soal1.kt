@@ -80,9 +80,9 @@ fun Soal1View(){
                             id = R.drawable.shopping_cart
                         ), contentDescription = "Icon Shopping Cart"
                         , modifier = Modifier
-                            .size(40.dp)
+                            .size(30.dp)
                     )
-                    Text("My Basket")
+                    Text("My Basket", color = Color.White, modifier = Modifier.padding(horizontal = 8.dp))
                 }
         }
 

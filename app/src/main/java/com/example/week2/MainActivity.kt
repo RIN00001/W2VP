@@ -21,3 +21,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+fun menu(){
+    //Soal1View()
+    //Soal2View()
+    //Soal3View()
+    //Soal4View()
+}
