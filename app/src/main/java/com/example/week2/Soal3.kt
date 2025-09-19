@@ -11,6 +11,8 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Receipt
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,10 +26,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.week2.Poppins
 import com.example.week2.R
 
 @Composable
-fun Soal3View() {
+fun Soal3View(onNavigate: (String) -> Unit) {
     Box(
         modifier = Modifier.fillMaxSize()
     ){
@@ -120,6 +123,18 @@ fun Soal3View() {
                     Text("Jam Kedatangan            : (10:01 - 11:00)", color = Color.White)
                     Text("Status                                : NGUTANG ", color = Color.White, fontWeight = FontWeight.Bold)
                 }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Button(
+                        onClick = {onNavigate("Menu")},
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text("Back to menu", color = Color.White, fontFamily = Poppins)
+                    }
+                }
             }
 
             Spacer(Modifier.weight(1f))
@@ -168,5 +183,5 @@ fun Soal3View() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun Soal3Preview() {
-    Soal3View()
+    Soal3View(onNavigate = {})
 }

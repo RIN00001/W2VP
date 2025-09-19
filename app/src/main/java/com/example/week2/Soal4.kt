@@ -35,7 +35,7 @@ val Poppins = FontFamily(
 )
 
 @Composable
-fun Soal4View() {
+fun Soal4View(onNavigate: (String) -> Unit) {
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -176,11 +176,11 @@ fun Soal4View() {
             ) {
                 //Harusnya ini Discard tapi aku ganti jadi button Go back to main menu
                 Button(
-                    onClick = {},
+                    onClick = {onNavigate("Menu")},
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
                     modifier = Modifier.weight(1f)
                 ) {
-                    Text("Discard", color = Color.White, fontFamily = Poppins)
+                    Text("Back to menu", color = Color.White, fontFamily = Poppins)
                 }
                 Spacer(Modifier.width(8.dp))
                 Button(
@@ -202,5 +202,5 @@ fun Soal4View() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun Soal4Preview(){
-Soal4View()
+Soal4View(onNavigate = {})
 }

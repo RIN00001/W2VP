@@ -16,6 +16,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -35,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Soal2View(){
+fun Soal2View(onNavigate: (String) -> Unit){
     var name by remember { mutableStateOf("") }
     var number by remember { mutableStateOf("") }
     var date by remember { mutableStateOf("") }
@@ -219,6 +221,19 @@ fun Soal2View(){
                 ){
                 Text("Complete Order", color = Color.White, fontSize = 18.sp ,fontWeight = FontWeight.Bold)
             }
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ){
+                Button(
+                    onClick = {onNavigate("Menu")},
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text("Back to menu", color = Color.White, fontFamily = Poppins)
+                }
+            }
         }
 
 
@@ -227,5 +242,5 @@ fun Soal2View(){
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun Soal2Preview(){
-    Soal2View()
+    Soal2View(onNavigate = {})
 }

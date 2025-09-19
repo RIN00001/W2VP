@@ -24,6 +24,8 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -45,7 +47,7 @@ import androidx.compose.ui.graphics.Color
 
 
 @Composable
-fun Soal1View(){
+fun Soal1View(onNavigate: (String) -> Unit){
     var text by remember { mutableStateOf("") }
     Column(
 
@@ -430,7 +432,18 @@ fun Soal1View(){
                         .align(Alignment.TopEnd)
                 )
             }
-
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(
+                onClick = {onNavigate("Menu")},
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
+                modifier = Modifier.weight(1f)
+            ) {
+                Text("Back to menu", color = Color.White, fontFamily = Poppins)
+            }
         }
     }
 }
@@ -439,9 +452,9 @@ fun Soal1View(){
 
 
 
-
+//Buat preview doang, kalo di main manggil view soalnya logicnya di situ
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun Soal1Preview(){
-Soal1View()
+Soal1View(onNavigate = {})
 }
